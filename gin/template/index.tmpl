@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--tmpl也成为go模板文件，就类似于JSP，前后端混合，模板文件处展示数据-->
+{{/*注释*/}}
+<html lang="zh-CN">
+    <head>
+        <title>模板继承</title>
+        <style>
+            * {
+                margin: 0;
+            }
+            .nav {
+                height: 50px;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                background-color: cornflowerblue;
+            }
+            .main {
+                margin-top: 50px;
+            }
+            .menu {
+                width: 20%;
+                position: fixed;
+                left: 0;
+                background-color: aqua;
+                height: 100%;
+            }
+            .content {
+                text-align: center;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav"></div>
+        <div class="main">
+            <div class="menu"></div>
+            <div class="content">
+                <p>这是index页</p>
+                <p1>{{ . }}</p1>
+            </div>
+        </div>
+    </body>
+</html>

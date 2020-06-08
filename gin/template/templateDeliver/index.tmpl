@@ -1,0 +1,7 @@
+<!--继承根模板，重新定义模板-->
+{{ template "base.tmpl" .}}
+<!--重新定义模板，名字要和根模板中的blockk块名字相同-->
+{{ define "content" }}
+    <h1>这是index页面</h1>
+    <h1>{{ . }}</h1>
+{{ end }}

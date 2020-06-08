@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!--tmpl也成为go模板文件，就类似于JSP，前后端混合，模板文件处展示数据-->
+{{/*注释*/}}
+<html lang="zh-CN">
+    <head>
+        <title>Misaki</title>
+    </head>
+    <body>
+        <p>Hello {{ . }} </p>
+        {{$v1 := .}}
+        {{$v2 := 100}}
+    </body>
+</html>

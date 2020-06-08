@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--嵌套模板-->
+<html lang="zh-CN">
+<head>
+    <title>Misaki</title>
+</head>
+<body>
+<hr>
+{{ template "hello.tmpl" }}
+<hr>
+{{/* 嵌套了一个通过define定义的模板 */}}
+{{ template "define.tmpl" }}
+<hr>
+</body>
+</html>
+{{/* 通过define定义一个模板, 放在最下方 */}}
+{{ define "define.tmpl" }}
+    <ol>
+        <li>唱</li>
+        <li>跳</li>
+        <li>rap</li>
+    </ol>
+{{ end }}

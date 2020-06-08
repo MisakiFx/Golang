@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--tmpl也成为go模板文件，就类似于JSP，前后端混合，模板文件处展示数据-->
+<html lang="zh-CN">
+<head>
+    <title>Misaki</title>
+</head>
+<body>
+<p>Hello {{- .Name -}}</p>
+<p>年龄 {{ .Age }}</p>
+{{/* 注释必须必须必须两边紧贴着括号写，不然就报错 */}}
+{{ $v1 := 100}}
+{{ $v2 := .}}
+{{/* 可以写判断 */}}
+{{ if $v1 }}
+{{ $v1 }}
+{{ else }}
+nothing
+{{ end }}
+{{ if lt .Age 22 }}
+好好上学
+{{ else }}
+好好上班
+{{ end }}
+</body>
+</html>

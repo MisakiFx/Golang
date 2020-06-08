@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--tmpl也成为go模板文件，就类似于JSP，前后端混合，模板文件处展示数据-->
+<html lang="zh-CN">
+<head>
+    <title>Misaki</title>
+</head>
+<body>
+<p>Hello {{.name}}</p>
+<p>年龄 {{.age}}</p>
+<p>性别 {{.gender}}</p>
+{{/* 遍历 */}}
+{{ range $k, $v := . }}
+    <p>{{ $k }} : {{ $v }}</p>
+{{ else }}
+    {{/* 没东西就执行这句话 */}}
+    nothing
+{{ end }}
+</body>
+</html>
